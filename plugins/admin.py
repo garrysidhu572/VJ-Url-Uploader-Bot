@@ -10,7 +10,7 @@ from plugins.buttons import *
 
 @Tech_VJ.on_message(filters.private & filters.command('total'))
 async def sts(c, m):
-    if m.from_user.id != Config.TECH_VJ_OWNER_ID:
+    if m.from_user.id != Config.OWNER_ID:
         return 
     total_users = await techvj.total_users_count()
     await m.reply_text(text=f"Total user(s) {total_users}", quote=True)
