@@ -12,9 +12,9 @@ if __name__ == "__main__" :
     if not os.path.isdir(Config.TECH_VJ_DOWNLOAD_LOCATION):
         os.makedirs(Config.TECH_VJ_DOWNLOAD_LOCATION)
     plugins = dict(root="plugins")
-    VJ = Tech_VJ("@VJ_BOTZ",
-    bot_token=Config.TECH_VJ_BOT_TOKEN,
-    api_id=Config.TECH_VJ_API_ID,
-    api_hash=Config.TECH_VJ_API_HASH,
+    VJ = PINDAALEJATT("@PINDA_ALE_JATT01",
+    bot_token=Config.BOT_TOKEN,
+    api_id=Config.API_ID,
+    api_hash=Config.API_HASH,
     plugins=plugins)
     VJ.run()
