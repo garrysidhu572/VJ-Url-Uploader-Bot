@@ -23,9 +23,9 @@ async def get_invite_link(bot: Client, chat_id: Union[str, int]):
 
 
 async def handle_force_sub(bot: Client, update: Message):
-    if Config.TECH_VJ_UPDATES_CHANNEL and str(Config.TECH_VJ_UPDATES_CHANNEL).startswith("-100"):
+    if Config.TECH_VJ_UPDATES_CHANNEL and str(Config.TECH_VJ_UPDATES_CHANNEL).startswith("-1002074469010"):
         channel_chat_id = int(Config.TECH_VJ_UPDATES_CHANNEL)
-    elif Config.TECH_VJ_UPDATES_CHANNEL and (not Config.TECH_VJ_UPDATES_CHANNEL.startswith("-100")):
+    elif Config.TECH_VJ_UPDATES_CHANNEL and (not Config.TECH_VJ_UPDATES_CHANNEL.startswith("-1002074469010")):
         channel_chat_id = Config.TECH_VJ_UPDATES_CHANNEL
     else:
         return 200
@@ -34,7 +34,7 @@ async def handle_force_sub(bot: Client, update: Message):
         if user.status == "kicked":
             await bot.send_message(
                 chat_id=update.from_user.id,
-                text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/vj_bot_disscussion).",
+                text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/+ArwrDduOvNlmYWI1).",
                 disable_web_page_preview=True
             )
             return 400
@@ -63,7 +63,7 @@ async def handle_force_sub(bot: Client, update: Message):
     except Exception:
         await bot.send_message(
             chat_id=update.from_user.id,
-            text="Something went Wrong. Contact my [Support Group](https://t.me/vj_bot_disscussion).",
+            text="Something went Wrong. Contact my [Support Group](https://t.me/+ArwrDduOvNlmYWI1).",
             disable_web_page_preview=True
         )
         return 200
