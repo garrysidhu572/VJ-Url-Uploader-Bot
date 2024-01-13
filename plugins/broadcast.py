@@ -31,7 +31,7 @@ async def send_msg(user_id, message):
 
 @Tech_VJ.on_message(filters.private & filters.command('broadcast') & filters.reply)
 async def broadcast_(c, m):
-    if m.from_user.id != Config.TECH_VJ_OWNER_ID:
+    if m.from_user.id != Config.OWNER_ID:
         return
     all_users = await techvj.get_all_users()
     
